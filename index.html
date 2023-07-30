@@ -13,6 +13,7 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column; /* Align items vertically */
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -25,6 +26,11 @@
       cursor: pointer; /* Add cursor pointer to indicate it's clickable */
     }
 
+    .click-text {
+      font-size: 1rem;
+      color: #666; /* Dark grey color for the click text */
+    }
+
     /* Custom CSS for different font styles */
     .font-style1 { font-family: 'Courier New', monospace; }
     .font-style2 { font-family: 'Arial', sans-serif; }
@@ -35,6 +41,7 @@
 <body>
   <div class="loading-text" onclick="changeFontStyle()">
     TETHEROUS <!-- The word "TETHEROUS" as the loading text -->
+    <div class="click-text">Click it</div> <!-- The "Click it" text in dark grey -->
   </div>
 
   <!-- JavaScript for redirection after 5 seconds -->
