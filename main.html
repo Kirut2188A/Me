@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add your custom CSS styles here -->
+  <style>
+    /* Include the Google Font - Roboto Mono */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+    /* Example CSS for minimalist black and white aesthetic */
+    body {
+      font-family: 'Roboto Mono', monospace; /* Use Roboto Mono as the monospace font */
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .main-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex; /* Use flexbox to place name and projects side by side */
+      flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    }
+
+    .name-section,
+    .projects-section,
+    .contact-section {
+      flex: 1; /* Take up 33% of the container on larger screens */
+      padding: 1rem;
+      box-sizing: border-box; /* Include padding in the width */
+      border: 2px solid #fff; /* White outline for name, projects, and contact boxes */
+      border-radius: 15px; /* Soften the edges */
+      background-color: #000;
+      margin: 0.5rem; /* Add some margin between the sections */
+    }
+
+    .projects-section {
+      /* Adjust the order of name and projects boxes on smaller screens */
+      order: 1;
+    }
+
+    .contact-section {
+      /* Adjust the order of the contact box on smaller screens */
+      order: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .name-section h1 {
+      color: #fff; /* White color for your name */
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .projects-list {
+      list-style: none; /* Remove bullet points from project list */
+      padding: 0;
+      margin: 0;
+    }
+
+    .projects-list li {
+      margin-bottom: 1rem;
+    }
+
+    .projects-list h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-buttons {
+      margin-top: 1rem;
+    }
+
+    .contact-buttons a {
+      display: inline-block;
+      background-color: #fff; /* White color for the buttons */
+      color: #000; /* Black text color for the buttons */
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      border-radius: 8px; /* Soften the edges */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Remove the "Your Name" heading from here -->
+  </header>
+
+  <div class="main-container">
+    <section class="name-section">
+      <h1>Tetherous</h1>
+      <p class="description">Eep 123 bloop 456 shoop! Zippity@ zap, razzle# dazzle& fizz! Quirky? blip! squish!</p>
+    </section>
+
+    <section class="projects-section">
+      <h2>Projects</h2>
+      <ul class="projects-list">
+        <li>
+          <h3>Guessing Game</h3>
+          <p>A fun guessing game project. <a href="https://kirut2188a.github.io/Guessing/" target="_blank">Play Here</a></p>
+        </li>
+        <!-- Add more projects as needed -->
+      </ul>
+    </section>
+
+    <section class="contact-section">
+      <h2>Contact</h2>
+      <div class="contact-buttons">
+        <a href="https://github.com/Kirut2188A" target="_blank">GitHub Profile</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Gibberish text and dynamic content JS -->
+  <script>
+    // Function to generate the fixed gibberish text with random colors
+    function generateGibberishText() {
+      const gibberishTextContainer = document.querySelector(".description");
+      const numberOfCharacters = 25; // Set the number of characters in the gibberish text
+
+      let gibberishContent = "";
+
+      for (let i = 0; i < numberOfCharacters; i++) {
+        let randomColor = getRandomColor();
+        let randomLetter = getRandomLetter();
+        gibberishContent += `<span style="color: ${randomColor};">${randomLetter}</span>`;
+      }
+
+      gibberishTextContainer.innerHTML = gibberishContent;
+    }
+
+    // Helper function to generate a random color in hexadecimal format
+    function getRandomColor() {
+      return "#" + Math.floor(Math.random() * 16777215).toString(16);
+    }
+
+    // Helper function to generate a random letter
+    function getRandomLetter() {
+      const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      return alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    }
+
+    // Generate the initial gibberish text
+    generateGibberishText();
+
+    // Update gibberish text every 0.5 seconds
+    setInterval(generateGibberishText, 500);
+  </script>
+</body>
+</html>
