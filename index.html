@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading...</title>
+  <!-- Add your custom CSS styles here -->
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .loading-text {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+    }
+
+    /* Custom CSS for different font styles */
+    .font-style1 { font-family: 'Courier New', monospace; }
+    .font-style2 { font-family: 'Arial', sans-serif; }
+    .font-style3 { font-family: 'Comic Sans MS', cursive; }
+    .font-style4 { font-family: 'Impact', fantasy; }
+  </style>
+</head>
+<body>
+  <div class="loading-text" onclick="changeFontStyle()">
+    TETHEROUS <!-- The word "TETHEROUS" as the loading text -->
+  </div>
+
+  <!-- JavaScript for redirection after 5 seconds -->
+  <script>
+    let currentFontStyle = 1; // Initialize with the first font style
+
+    function changeFontStyle() {
+      const loadingText = document.querySelector('.loading-text');
+
+      // Toggle between different font styles
+      if (currentFontStyle === 1) {
+        loadingText.classList.remove('font-style1');
+        loadingText.classList.add('font-style2');
+        currentFontStyle = 2;
+      } else if (currentFontStyle === 2) {
+        loadingText.classList.remove('font-style2');
+        loadingText.classList.add('font-style3');
+        currentFontStyle = 3;
+      } else if (currentFontStyle === 3) {
+        loadingText.classList.remove('font-style3');
+        loadingText.classList.add('font-style4');
+        currentFontStyle = 4;
+      } else {
+        loadingText.classList.remove('font-style4');
+        loadingText.classList.add('font-style1');
+        currentFontStyle = 1;
+      }
+    }
+
+    // Redirect to main.html after 5 seconds
+    setTimeout(function() {
+      window.location.href = "main.html";
+    }, 5000);
+  </script>
+</body>
+</html>
