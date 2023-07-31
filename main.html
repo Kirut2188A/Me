@@ -41,58 +41,8 @@
       margin: 0.5rem; /* Add some margin between the sections */
     }
 
-    .projects-section {
-      /* Adjust the order of name and projects boxes on smaller screens */
-      order: 1;
-    }
+    /* ... The rest of your CSS styles ... */
 
-    .contact-section {
-      /* Adjust the order of the contact box on smaller screens */
-      order: 2;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .name-section h1 {
-      color: #fff; /* White color for your name */
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .projects-list {
-      list-style: none; /* Remove bullet points from project list */
-      padding: 0;
-      margin: 0;
-    }
-
-    .projects-list li {
-      margin-bottom: 1rem;
-    }
-
-    .projects-list h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-buttons {
-      margin-top: 1rem;
-    }
-
-    .contact-buttons a {
-      display: inline-block;
-      background-color: #fff; /* White color for the buttons */
-      color: #000; /* Black text color for the buttons */
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      margin: 0.5rem;
-      border-radius: 8px; /* Soften the edges */
-    }
   </style>
 </head>
 <body>
@@ -113,6 +63,14 @@
           <h3>Guessing Game</h3>
           <p>A fun guessing game project. <a href="https://kirut2188a.github.io/Guessing/" target="_blank">Play Here</a></p>
         </li>
+        <li>
+          <h3>Color Picker</h3>
+          <p>A color picker project. <a href="https://kirut2188a.github.io/colourpicker/" target="_blank">Try it Here</a></p>
+        </li>
+        <li>
+          <h3>Color Typer</h3>
+          <p>A color typer project. <a href="https://kirut2188a.github.io/colourtyper/" target="_blank">Check it Out</a></p>
+        </li>
         <!-- Add more projects as needed -->
       </ul>
     </section>
@@ -130,7 +88,7 @@
     // Function to generate the fixed gibberish text with random colors
     function generateGibberishText() {
       const gibberishTextContainer = document.querySelector(".description");
-      const numberOfCharacters = 25; // Set the number of characters in the gibberish text
+      const numberOfCharacters = 20; // Set the number of characters in the gibberish text
 
       let gibberishContent = "";
 
